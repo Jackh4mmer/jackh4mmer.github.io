@@ -1,0 +1,688 @@
+@charset "utf-8";
+/* CSS Document */
+
+@font-face {
+    font-family: 'AvenirLTStd35Light';
+    src: url('fonts/AvenirLTStd-Light/avenirltstd-light.eot');
+    src: url('fonts/AvenirLTStd-Light/avenirltstd-light.eot') format('embedded-opentype'),
+         url('fonts/AvenirLTStd-Light/avenirltstd-light.svg#AvenirLTStd35Light') format('svg'),
+         url('fonts/AvenirLTStd-Light/avenirltstd-light.woff') format('woff'),
+         url('fonts/AvenirLTStd-Light/avenirltstd-light.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+    font-family: 'AvenirLTStd45Book';
+    src: url('fonts/AvenirLTStd-Book/avenirltstd-book.eot');
+    src: url('fonts/AvenirLTStd-Book/avenirltstd-book.eot') format('embedded-opentype'),
+         url('fonts/AvenirLTStd-Book/avenirltstd-book.svg#AvenirLTStd45Book') format('svg'),
+         url('fonts/AvenirLTStd-Book/avenirltstd-book.woff') format('woff'),
+         url('fonts/AvenirLTStd-Book/avenirltstd-book.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+    font-family: 'AvenirLTStd65Medium';
+    src: url('fonts/AvenirLTStd-Medium/avenirltstd-medium.eot');
+    src: url('fonts/AvenirLTStd-Medium/avenirltstd-medium.eot') format('embedded-opentype'),
+         url('fonts/AvenirLTStd-Medium/avenirltstd-medium.svg#AvenirLTStd65Medium') format('svg'),
+         url('fonts/AvenirLTStd-Medium/avenirltstd-medium.woff') format('woff'),
+         url('fonts/AvenirLTStd-Medium/avenirltstd-medium.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+    font-family: 'AvenirLTStd85Heavy';
+    src: url('fonts/AvenirLTStd-Heavy/avenirltstd-heavy.eot');
+    src: url('fonts/AvenirLTStd-Heavy/avenirltstd-heavy.eot') format('embedded-opentype'),
+         url('fonts/AvenirLTStd-Heavy/avenirltstd-heavy.svg#AvenirLTStd85Heavy') format('svg'),
+         url('fonts/AvenirLTStd-Heavy/avenirltstd-heavy.woff') format('woff'),
+         url('fonts/AvenirLTStd-Heavy/avenirltstd-heavy.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+	height: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(147,91,0,0.2);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(147,91,0,0.8);
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+	background: rgba(147,91,0,0.4); 
+}
+
+::-webkit-scrollbar-corner {
+    background: rgba(147,91,0,0.2);	
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+}
+
+html, body {
+	width: 100%;
+	height: 100%;	
+}
+
+body {
+	font-family: 'AvenirLTStd35Light';
+	background: url(images/background.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-color: rgb(20,20,20);
+	color: rgb(220,220,220);
+	-webkit-text-stroke: 0.4px rgb(220,220,220);
+	font-weight: normal;
+	font-size: 15px;
+	overflow: hidden;
+	position: fixed;
+}
+
+#site {
+	width: 100%;
+	height: 100%;
+	text-align: center;
+}
+
+#margin {
+	height: 15%;
+}
+
+.logo {
+	width: 150px;
+	margin-bottom: 50px;
+}
+
+h2 {
+	font-family: 'AvenirLTStd35Light';
+	font-size: 50px;
+	font-weight: lighter;
+	color: rgb(147,91,0);
+	-webkit-text-stroke: 0.5px rgb(147,91,0);
+	margin-bottom: 5px;
+}
+
+h1 {
+	font-family: 'AvenirLTStd85Heavy';
+	font-size: 80px;
+	max-width: 765px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.introduction {
+	transform: scaleY(0);
+	transform-origin: 50% top 0;
+	transition: all 0.4s ease-in-out;
+	height: 0;
+	margin-top: 0;
+	overflow: hidden;
+	font-family: 'AvenirLTStd35Light';
+	font-size: 18px;
+	font-weight: lighter;
+	color: rgb(200,200,200);
+	-webkit-text-stroke: 0.5px rgb(200,200,200);
+}
+
+h1:hover .introduction {
+	transform: scaleY(1);
+	min-height: 91px;
+	margin-top: 25px;
+	margin-bottom: 45px;
+}
+
+/*.highlighted {
+	color: rgb(147,91,0);
+	-webkit-text-stroke: 0.5px rgb(147,91,0);
+}*/
+
+#border {
+	border-top: solid 2px rgb(147,91,0);
+	width: 180px;
+	margin: 18px auto;
+}
+
+nav {
+	margin-top: 60px;
+	margin-bottom: 20px;
+}
+
+.buttons {
+	width: 35px;
+	margin: 0 5px;
+}
+
+#blackcover {
+	background: rgba(0,0,0,0.6);
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+}
+
+/*WORKS PAGES*/
+
+body.works {
+	background: url(images/background.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-color: rgb(20,20,20);
+}
+
+#blackcover.works {
+	background: rgba(0,0,0,0.8);
+}
+
+.logo.worksandprofile {
+	width: 100px;
+	margin-bottom: 15px;
+}
+
+#caption {
+	height: 100%;
+	max-height: 200px;
+}
+
+#bullets {
+	display: inline-block;
+}
+
+#bullets.bullets2 {
+	margin-top: 20px;
+}
+
+.bullet {
+	width: 10px;
+	height: 10px;
+	margin: 0 5px;
+	opacity: 0.3;
+}
+
+.bullet.active {
+	opacity: 1;
+}
+
+#site.works {
+	background-image: url(images/background.png);
+	background-repeat: no-repeat;
+	background-position: left top;
+	background-attachment: fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	width: 25%;
+	width: 450px;
+	height: 100%;
+	position: relative;
+	float: left;
+	z-index: 1;
+}
+
+#margin.works {
+	height: 5%;
+}
+
+h2.works {
+	font-size: 34px;
+	position: relative;
+}
+
+h1.works {
+	font-size: 70px;
+	position: relative;
+}
+
+#border.works {
+	margin: 10px auto;
+	position: relative;
+}
+
+.title {
+	font-family: 'AvenirLTStd35Light';
+	font-size: 40px;
+	color: rgb(147,91,0);
+	-webkit-text-stroke: 0.5px rgb(147,91,0);
+	margin-top: 18px;
+	position: relative;
+}
+
+h3 {
+	margin: 75px 40px 15px 40px;
+	position: relative;
+	color: rgb(200,200,200);
+	-webkit-text-stroke: 0.5px rgb(200,200,200);
+}
+
+#description {
+	margin: 0 40px;
+	position: relative;
+	color: rgb(200,200,200);
+	-webkit-text-stroke: 0.5px rgb(200,200,200);
+}
+
+nav.works {
+	position: relative;
+	height: auto;
+	width: 392px;
+	left: 50%;
+	margin-left: -196px;
+	margin-top: 35px;
+}
+
+@media screen and (min-height: 860px) {
+	
+	nav.works {
+		bottom: 20px;
+		position: absolute;
+	}
+	
+}
+
+.link {
+	position: relative;
+	top: -12px;
+}
+
+.pages {
+	background-image: url(images/button.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	width: 35px;
+	height: 28px;
+	display: inline-block;
+	font-size: 17px;
+	color: rgb(200,200,200);
+	-webkit-text-stroke: 0.5px rgb(200,200,200);
+	margin: 0 5px 3px 5px;
+	padding-top: 7px;
+}
+
+/*.pages.highlighted {
+	font-family: 'AvenirLTStd65Medium';
+	color: rgb(200,200,200);
+	-webkit-text-stroke: 0.5px rgb(200,200,200);
+}*/
+
+#overview {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	overflow: auto;
+}
+
+#overview.overviewp1 {
+	background: url(images/workspage1.jpg);
+	background-repeat: no-repeat;
+	background-position: 40% 60%;
+	background-attachment: fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-color: rgb(20,20,20);
+}
+
+#overview.overviewp2 {
+	background: url(images/workspage2.jpg);
+	background-repeat: no-repeat;
+	background-position: calc(80px + 25%) 25%;
+	background-attachment: fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-color: rgb(20,20,20);
+}
+
+#overview.overviewp3 {
+	background: url(images/workspage3.jpg);
+	background-repeat: no-repeat;
+	background-position: 6% 50%;
+	background-attachment: fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-color: rgb(20,20,20);
+}
+
+#overview.overviewp4 {
+	background: url(images/workspage4.jpg);
+	background-repeat: no-repeat;
+	background-position: 80% 60%;
+	background-attachment: fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-color: rgb(20,20,20);
+}
+
+#overview.overviewp5 {
+	background: url(images/workspage5.jpg);
+	background-repeat: no-repeat;
+	background-position: 20% 40%;
+	background-attachment: fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-color: rgb(20,20,20);
+}
+
+#overview.overviewp6 {
+	background: url(images/workspage6.jpg);
+	background-repeat: no-repeat;
+	background-position: 80% 30%;
+	background-attachment: fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-color: rgb(20,20,20);
+}
+
+#overview.overviewp7 {
+	background: url(images/workspage7.jpg);
+	background-repeat: no-repeat;
+	background-position: calc(125px + 10%) 50%;
+	background-attachment: fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-color: rgb(20,20,20);
+}
+
+#overview.overviewp8 {
+	background: url(images/workspage8.jpg);
+	background-repeat: no-repeat;
+	background-position: 55% 50%;
+	background-attachment: fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-color: rgb(20,20,20);
+}
+
+#overview.overviewp9 {
+	background: url(images/workspage9.jpg);
+	background-repeat: no-repeat;
+	background-position: 60% 30%;
+	background-attachment: fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-color: rgb(20,20,20);
+}
+
+#overview.overviewp10 {
+	background: url(images/workspage10.jpg);
+	background-repeat: no-repeat;
+	background-position: 10% 50%;
+	background-attachment: fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-color: rgb(20,20,20);
+}
+
+#overview.overviewp11 {
+	background: url(images/workspage11.jpg);
+	background-repeat: no-repeat;
+	background-position: calc(225px + 35%) 50%;
+	background-attachment: fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-color: rgb(20,20,20);
+}
+
+.workscontain {
+	padding: 100px 125px 100px 575px;
+	width: calc(100% - 700px);
+	min-width: 500px;
+	height: calc(100% - 200px);
+	text-align: center;
+	position: absolute;
+}
+
+.scrollingimage {
+	width: 100%;
+	margin-bottom: 96px;
+}
+
+.standardimage {
+	height: 100%;
+	min-height: 500px;
+	margin-bottom: 96px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.clip {
+	height: 100%;
+	margin-bottom: 96px;
+}
+
+.workspage1_2 {
+	max-width: 1000px;
+}
+
+.workspage2_2 {
+	max-width: 1000px;
+}
+
+.workspage3_2 {
+	background-image: url(images/workspage3_2.jpg);
+}
+
+.workspage3_3 {
+	background-image: url(images/workspage3_3.png);
+}
+
+.workspage4_2 {
+	background-image: url(images/workspage4_2.svg);
+	max-width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.workspage5_2 {
+	background-image: url(images/workspage5_2.jpg);
+}
+
+.workspage6_2 {
+	background-image: url(images/workspage6_2.jpg);
+}
+
+.workspage6_3 {
+	background-image: url(images/workspage6_3.jpg);
+}
+
+.workspage9_2 {
+	max-width: 1000px;
+}
+
+.workspage8_2 {
+	width: 100%;
+	height: 100%;
+	max-width: 900px;
+}
+
+.workspage10_2 {
+	max-width: 800px;
+}
+
+#verticalalign {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+}
+
+.videocontainer {
+	width: 100%;
+	height: 0;
+	padding-bottom: 56.25%;
+	overflow: hidden;
+	position: relative;
+	display: table;
+}
+
+.videocontainer object {
+	width: 100%!important;
+	height: 100%!important;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+@media screen and (min-width: 955px) and (max-width: 1200px) { 
+
+	.workscontain {
+		padding-left: 47.5%;
+		padding-right: 0;
+	}
+	
+}
+
+@media screen and (max-width: 955px) { 
+
+	.workscontain {
+		padding-left: 450px;
+		padding-right: 0;
+	}
+	
+}
+
+/*PROFILE PAGE*/
+
+body.profile {
+	background: url(images/background.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-color: rgb(20,20,20);
+}
+
+#site.profile {
+	background-image: none;
+	width: 450px;
+	height: 100%;
+	text-align: center;
+	position: relative;
+	float: left;
+	z-index: 1;
+}
+
+#blackcover.profile {
+	background-color: rgba(0,0,0,0.3);
+}
+
+nav.profile {
+	position: relative;
+	height: auto;
+	width: 392px;
+	left: 50%;
+	margin-left: -196px;
+}
+
+@media screen and (min-height: 595px) {
+	
+	nav.profile {
+		bottom: 20px;
+		position: absolute;
+	}
+	
+}
+
+#blackcover.blackcover3 {
+	background: rgba(0,0,0,0.7);
+}
+
+.profilecontain {
+	margin-left: 575px;
+	margin-top: 75px;
+	margin-right: 125px;
+	width: auto;
+}
+
+.avatar {
+    width: 100px;
+    position: relative;
+    margin-left: 50%;
+	left: -50px;
+}
+
+#presentationtitle {
+	margin: 20px 0 30px 0;
+}
+
+.presentation {
+	font-size: 16px;
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+h4.educationexperience {
+	margin-top: 60px;
+}
+
+h4 {
+	color: rgb(147,91,0);
+	-webkit-text-stroke: 0.5px rgb(147,91,0);
+	text-align: center;
+	font-size: 16px;
+    font-family: 'AvenirLTStd65Medium';
+	margin: 20px 0 15px 0;
+}
+
+.softwares {
+	width: 100%;
+	position: relative;
+	right: -50%;
+	margin-left: -50%;
+	text-align: center;
+	margin-top: 40px;
+	margin-bottom: 20px;
+}
+
+.softwareslogo {
+	width: 100px;
+	margin: 0 10px 20px 10px;
+}
